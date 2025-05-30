@@ -1,9 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Site</title>
+    <title>My Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #myImage {
+            display: none;
+            max-width: 300px;
+            margin: 20px auto;
+            border: 2px solid #333;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello World!</h1>
+    <h1>Welcome to My Website</h1>
+    
+    <button onclick="showImage()">View</button>
+    
+    <div id="imageContainer">
+        <img id="myImage" src="" alt="My Image">
+    </div>
+
+    <script>
+        function showImage() {
+            // Replace this URL with your image URL
+            const imageUrl = "https://example.com/your-image.jpg";
+            
+            const image = document.getElementById("myImage");
+            image.src = imageUrl;
+            image.style.display = "block";
+        }
+    </script>
 </body>
 </html>
